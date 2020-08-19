@@ -1,4 +1,4 @@
-name: Build README and deploy Datasette
+name: Build README
 
 on:
   push:
@@ -42,26 +42,3 @@ jobs:
         git config --global user.name "README-bot"
         git diff --quiet || (git add README.md && git commit -m "Updated README")
         git push
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Deploy Datasette using Zeit Now
-      env:
-        NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
-      run: |-
-        datasette publish now til.db \
-          --token $NOW_TOKEN \
-          --branch main \
-          --project bhrutledge-til \
-          --metadata metadata.yaml \
-          --install py-gfm \
-          --install datasette-render-markdown \
-          --install datasette-template-sql \
-          --install datasette-atom~=0.6 \
-          --install datasette-json-html \
-          --install beautifulsoup4 \
-          --install "datasette-graphql>=0.12" \
-          --plugins-dir plugins \
-          --template-dir templates \
-          --public
