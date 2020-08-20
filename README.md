@@ -1,6 +1,6 @@
 # Today I Learned
 
-My Today I Learned snippets. Based on [simonw/til](https://github.com/simonw/til).
+An evergreen collection of concise write-ups on things I learn day-to-day. Inspired by [simonw/til](https://github.com/simonw/til) and [jbranchaud/til](https://github.com/jbranchaud/til).
 
 <!-- count starts -->2<!-- count ends --> TILs so far.
 
