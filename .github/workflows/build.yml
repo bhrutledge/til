@@ -27,14 +27,11 @@ jobs:
           ${{ runner.os }}-pip-
     - name: Install Python dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install --upgrade pip setuptools wheel
         pip install -r requirements.txt
-    - name: Build database
-      run: python build_database.py
     - name: Update README
       run: |-
-        python update_readme.py --rewrite
-        cat README.md
+        invoke update-readme --rewrite
     - name: Commit and push if README changed
       run: |-
         git diff
