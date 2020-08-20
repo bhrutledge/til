@@ -38,12 +38,10 @@ def build_database(repo_path):
         title = fp.readline().lstrip("#").strip()
         body = fp.read().strip()
         path = str(filepath.relative_to(root))
-        url = "https://github.com/bhrutledge/til/blob/main/{}".format(path)
         record = {
-            "path": path.replace("/", "_"),
+            "path": path,
             "topic": path.split("/")[0],
             "title": title,
-            "url": url,
             "body": body,
         }
         record.update(all_times[path])
