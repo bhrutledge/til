@@ -1,11 +1,4 @@
 GitPython
 sqlite-utils
-py-gfm
-beautifulsoup4
-datasette
-datasette-render-markdown
-datasette-publish-now>=0.6
-datasette-template-sql>=1.0
-datasette-graphql
 flake8
 black
