@@ -9,3 +9,5 @@ Unfortunately, recordings can't be embedded directly in Markdown files or GitHub
 Here's a GIF of the recording above, which shows running `asciinema` followed by `asciicast2gif`:
 
 ![asciinema demo GIF](./asciinema.gif)
+
+See also: [Recording the screen in macOS](/macos/screen-recordings.md)
