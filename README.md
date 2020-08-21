@@ -2,7 +2,7 @@
 
 An evergreen collection of concise write-ups on things I learn day-to-day. Inspired by [simonw/til](https://github.com/simonw/til) and [jbranchaud/til](https://github.com/jbranchaud/til).
 
-<!-- count starts -->3<!-- count ends --> TILs so far.
+<!-- count starts -->5<!-- count ends --> TILs so far.
 
 <!-- index starts -->
 ## coffee
@@ -13,4 +13,12 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 ## python
 
 * [Uninstall all Python packages with pip](python/pip-uninstall-all.md) - 2020-08-20
+
+## command-line
+
+* [Record terminal sessions with asciinema](command-line/record-terminal-asciinema.md) - 2020-08-21
+
+## macos
+
+* [Recording the screen in macOS](macos/screen-recordings.md) - 2020-08-21
 <!-- index ends -->
