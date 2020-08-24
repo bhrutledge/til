@@ -2,7 +2,7 @@
 
 An evergreen collection of concise write-ups on things I learn day-to-day. Inspired by [simonw/til](https://github.com/simonw/til) and [jbranchaud/til](https://github.com/jbranchaud/til).
 
-<!-- count starts -->5<!-- count ends --> TILs so far.
+<!-- count starts -->6<!-- count ends --> TILs so far.
 
 <!-- index starts -->
 ## coffee
@@ -21,4 +21,5 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 ## macos
 
 * [Recording the screen in macOS](macos/screen-recordings.md) - 2020-08-21
+* [Running Windows 10 on macOS](macos/windows.md) - 2020-08-24
 <!-- index ends -->
