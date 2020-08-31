@@ -18,11 +18,14 @@ from contextlib import contextmanager
 
 @contextmanager
 def pipeable():
+    """
+    Silence noisy errors from `python my_script.py | head`.
+
+    https://docs.python.org/3/library/signal.html#note-on-sigpipe
+    """
     try:
         yield
     except BrokenPipeError:
-        # Avoid noisy errors from `python my_script.py | head`
-        # https://docs.python.org/3/library/signal.html#note-on-sigpipe
         os.dup2(os.open(os.devnull, os.O_WRONLY), sys.stdout.fileno())
         sys.exit(1)
 
