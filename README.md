@@ -2,7 +2,7 @@
 
 An evergreen collection of concise write-ups on things I learn day-to-day. Inspired by [simonw/til](https://github.com/simonw/til) and [jbranchaud/til](https://github.com/jbranchaud/til).
 
-<!-- count starts -->6<!-- count ends --> TILs so far.
+<!-- count starts -->8<!-- count ends --> TILs so far.
 
 <!-- index starts -->
 ## coffee
@@ -13,6 +13,7 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 ## python
 
 * [Uninstall all Python packages with pip](python/pip-uninstall-all.md) - 2020-08-20
+* [Avoid broken pipe errors](python/broken-pipe.md) - 2020-08-30
 
 ## command-line
 
@@ -22,4 +23,8 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 
 * [Recording the screen in macOS](macos/screen-recordings.md) - 2020-08-21
 * [Running Windows 10 on macOS](macos/windows.md) - 2020-08-24
+
+## git
+
+* [Tidy up initial commits with `rebase --root`](git/rebase-initial-commit.md) - 2020-08-30
 <!-- index ends -->
