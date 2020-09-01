@@ -2,7 +2,7 @@
 
 An evergreen collection of concise write-ups on things I learn day-to-day. Inspired by [simonw/til](https://github.com/simonw/til) and [jbranchaud/til](https://github.com/jbranchaud/til).
 
-<!-- count starts -->8<!-- count ends --> TILs so far.
+<!-- count starts -->9<!-- count ends --> TILs so far.
 
 <!-- index starts -->
 ## coffee
@@ -27,4 +27,5 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 
 - [Uninstall all Python packages with pip](python/pip-uninstall-all.md) - 2020-08-20
 - [Avoid broken pipe errors](python/broken-pipe.md) - 2020-08-30
+- [Add type annotations to a script with MonkeyType](python/monkeytype-script.md) - 2020-09-01
 <!-- index ends -->
