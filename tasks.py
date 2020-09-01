@@ -7,9 +7,10 @@ import pathlib
 import re
 from datetime import timezone
 
-import git
 import sqlite_utils
 from invoke import task
+
+import git
 
 root = pathlib.Path(__file__).parent.resolve()
 db_path = root / "til.db"
@@ -17,29 +18,30 @@ db_path = root / "til.db"
 index_re = re.compile(r"<!\-\- index starts \-\->.*<!\-\- index ends \-\->", re.DOTALL)
 count_re = re.compile(r"<!\-\- count starts \-\->.*<!\-\- count ends \-\->", re.DOTALL)
 
-COUNT_TEMPLATE = "<!-- count starts -->{}<!-- count ends -->"
+format_count = "<!-- count starts -->{}<!-- count ends -->".format
 
 
 def created_changed_times(repo_path, ref="main"):
-    created_changed_times = {}
+    times = {}
     repo = git.Repo(repo_path, odbt=git.GitDB)
     commits = reversed(list(repo.iter_commits(ref)))
     for commit in commits:
         dt = commit.committed_datetime
-        affected_files = list(commit.stats.files.keys())
-        for filepath in affected_files:
-            if filepath not in created_changed_times:
-                created_changed_times[filepath] = {
+        for filepath in commit.stats.files:
+            times.setdefault(
+                filepath,
+                {
                     "created": dt.isoformat(),
                     "created_utc": dt.astimezone(timezone.utc).isoformat(),
-                }
-            created_changed_times[filepath].update(
+                },
+            )
+            times[filepath].update(
                 {
                     "updated": dt.isoformat(),
                     "updated_utc": dt.astimezone(timezone.utc).isoformat(),
                 }
             )
-    return created_changed_times
+    return times
 
 
 @task
@@ -60,8 +62,8 @@ def build_database(c):
             "topic": path.split("/")[0],
             "title": title,
             "body": body,
+            **all_times[path],
         }
-        record.update(all_times[path])
         table.insert(record)
 
     if "til_fts" not in db.table_names():
@@ -77,14 +79,11 @@ def update_readme(c, rewrite=False):
         by_topic.setdefault(row["topic"], []).append(row)
 
     index = ["<!-- index starts -->"]
-    for topic, rows in by_topic.items():
-        index.append("## {}\n".format(topic))
+    for topic, rows in sorted(by_topic.items()):
+        index.append(f"## {topic}\n")
         for row in rows:
-            index.append(
-                "* [{title}]({path}) - {date}".format(
-                    date=row["created"].split("T")[0], **row
-                )
-            )
+            date = row["created"].split("T")[0]
+            index.append(f"- [{row['title']}]({row['path']}) - {date}")
         index.append("")
     if index[-1] == "":
         index.pop()
@@ -92,10 +91,10 @@ def update_readme(c, rewrite=False):
 
     if rewrite:
         readme = root / "README.md"
-        index_txt = "\n".join(index).strip()
         readme_contents = readme.open().read()
+        index_txt = "\n".join(index).strip()
         rewritten = index_re.sub(index_txt, readme_contents)
-        rewritten = count_re.sub(COUNT_TEMPLATE.format(db["til"].count), rewritten)
+        rewritten = count_re.sub(format_count(db["til"].count), rewritten)
         readme.open("w").write(rewritten)
     else:
         print("\n".join(index))
