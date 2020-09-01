@@ -7,8 +7,8 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 <!-- index starts -->
 ## coffee
 
-- [Drink coffee at lower temperature](coffee/drinking-temperature.md) - 2020-08-19
 - [Brew coffee with boiling water](coffee/boiling-water.md) - 2020-08-19
+- [Drink coffee at lower temperature](coffee/drinking-temperature.md) - 2020-08-19
 
 ## command-line
 
@@ -16,7 +16,7 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 
 ## git
 
-- [Tidy up initial commits with `rebase --root`](git/rebase-initial-commit.md) - 2020-08-30
+- [Tidy up initial commits with `git rebase --root`](git/rebase-initial-commit.md) - 2020-08-30
 
 ## macos
 
@@ -25,7 +25,7 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 
 ## python
 
+- [Add type annotations to a Python script with MonkeyType](python/monkeytype-script.md) - 2020-09-01
+- [Avoid broken pipe errors from Python scripts](python/broken-pipe.md) - 2020-08-30
 - [Uninstall all Python packages with pip](python/pip-uninstall-all.md) - 2020-08-20
-- [Avoid broken pipe errors](python/broken-pipe.md) - 2020-08-30
-- [Add type annotations to a script with MonkeyType](python/monkeytype-script.md) - 2020-09-01
 <!-- index ends -->

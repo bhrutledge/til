@@ -1,4 +1,4 @@
-# Avoid broken pipe errors
+# Avoid broken pipe errors from Python scripts
 
 For example:
 

@@ -75,7 +75,7 @@ def update_readme(c, rewrite=False):
     db = sqlite_utils.Database(db_path)
 
     by_topic = {}
-    for row in db["til"].rows_where(order_by="created_utc"):
+    for row in db["til"].rows_where(order_by="title"):
         by_topic.setdefault(row["topic"], []).append(row)
 
     index = ["<!-- index starts -->"]

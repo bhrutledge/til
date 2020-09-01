@@ -1,4 +1,4 @@
-# Add type annotations to a script with MonkeyType
+# Add type annotations to a Python script with MonkeyType
 
 Given a `script.py` like:
 

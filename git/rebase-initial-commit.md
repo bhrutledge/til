@@ -1,4 +1,4 @@
-# Tidy up initial commits with `rebase --root`
+# Tidy up initial commits with `git rebase --root`
 
 When I first start a project, I often end up with bunch of small and "fixup" commits on the main branch. I think it's nice to keep a "clean" commit history. To squash those commits into the "initial" or "first" commit, use:
 
