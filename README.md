@@ -7,8 +7,8 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 <!-- index starts -->
 ## coffee
 
-- [Brew coffee with boiling water](coffee/boiling-water.md) - 2020-08-19
 - [Drink coffee at lower temperature](coffee/drinking-temperature.md) - 2020-08-19
+- [Brew coffee with boiling water](coffee/boiling-water.md) - 2020-08-19
 
 ## command-line
 
