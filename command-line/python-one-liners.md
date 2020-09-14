@@ -1,6 +1,6 @@
 # Use `python -c` one-liners to supplement shell commands
 
-I found myself wanting to [percent encode](https://en.wikipedia.org/wiki/Percent-encoding) a string on the command line (and eventually a [shell script](https://github.com/bhrutledge/dotfiles/blob/master/src/.local/bin/gh-search-repos)). I wasn't able to find a simple Bash one-liner, but it is [built into Python](https://docs.python.org/3.3/library/urllib.parse.html?highlight=urlencode#url-quoting). Using the `-c` option with trivial command-line parsing yields:
+I found myself wanting to [percent encode](https://en.wikipedia.org/wiki/Percent-encoding) a string on the command line (and eventually in a [shell script](https://github.com/bhrutledge/dotfiles/blob/master/src/.local/bin/gh-search-repos)). I wasn't able to find a simple Bash one-liner, but it is [built into Python](https://docs.python.org/3.3/library/urllib.parse.html?highlight=urlencode#url-quoting). Using the [`-c` option](https://docs.python.org/3/using/cmdline.html#cmdoption-c) with trivial [command-line parsing](https://docs.python.org/3/library/sys.html#sys.argv) yields:
 
 ```
 $ python -c 'import sys, urllib.parse; print(urllib.parse.quote_plus(sys.argv[1]))' 'foo bar'
