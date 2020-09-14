@@ -2,9 +2,13 @@
 
 An evergreen collection of concise write-ups on things I learn day-to-day. Inspired by [simonw/til](https://github.com/simonw/til) and [jbranchaud/til](https://github.com/jbranchaud/til).
 
-<!-- count starts -->12<!-- count ends --> TILs so far.
+<!-- count starts -->14<!-- count ends --> TILs so far.
 
 <!-- index starts -->
+## bash
+
+- [Format and lint Bash scripts](bash/format-lint.md) - 2020-09-14
+
 ## coffee
 
 - [Brew coffee with boiling water](coffee/boiling-water.md) - 2020-08-19
@@ -13,6 +17,7 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 ## command-line
 
 - [Record terminal sessions with asciinema](command-line/record-terminal-asciinema.md) - 2020-08-21
+- [Use `python -c` one-liners to supplement shell commands](command-line/python-one-liners.md) - 2020-09-14
 
 ## git
 
