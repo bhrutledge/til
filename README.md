@@ -2,7 +2,7 @@
 
 An evergreen collection of concise write-ups on things I learn day-to-day. Inspired by [simonw/til](https://github.com/simonw/til) and [jbranchaud/til](https://github.com/jbranchaud/til).
 
-<!-- count starts -->14<!-- count ends --> TILs so far.
+<!-- count starts -->15<!-- count ends --> TILs so far.
 
 <!-- index starts -->
 ## bash
@@ -27,6 +27,10 @@ An evergreen collection of concise write-ups on things I learn day-to-day. Inspi
 
 - [Recording the screen in macOS](macos/screen-recordings.md) - 2020-08-21
 - [Running Windows 10 on macOS](macos/windows.md) - 2020-08-24
+
+## open-source
+
+- [Consider the Hippocratic License](open-source/hippocratic-license.md) - 2020-09-15
 
 ## python
 
